@@ -1,13 +1,11 @@
 package com.company.springbootgraphqlexample.repository;
 
 import com.company.springbootgraphqlexample.entity.User;
-import org.springframework.data.jpa.repository.JpaRepository;
-
 
 import java.util.Optional;
 
-public interface UserRepository extends JpaRepository<User, Integer> {
-    Optional<User> findByUsername(String username);
+import org.springframework.data.mongodb.repository.MongoRepository;
 
+public interface UserRepository extends MongoRepository<User, Long> {
     Optional<User> findByEmail(String email);
 }
