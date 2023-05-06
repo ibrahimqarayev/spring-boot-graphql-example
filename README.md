@@ -1,1 +1,1 @@
-# springboot-graphql-example
+Spring Boot + GarphQL
