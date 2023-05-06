@@ -1,20 +1,9 @@
-#spring:
-#  data:
-#    mongodb:
-#      host: localhost
-#      port: 27017
-#      database: testdb
-#      username: root
-#      password: root
-#      authentication-database: admin
-#      uri: mongodb://root:root@localhost:27017/testdb
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/testdb
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-
   jpa:
     hibernate:
       ddl-auto: create
@@ -27,3 +16,7 @@ spring:
       allowed-methods: true
       allowed-headers: true
       allow-credentials: true
+    path: /graphql
+
+
+
