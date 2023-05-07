@@ -9,6 +9,8 @@ spring:
       ddl-auto: create
 
   graphql:
+    graphiql:
+      enabled: true
     schema:
       printer:
         enabled: true
@@ -17,6 +19,6 @@ spring:
       allowed-headers: true
       allow-credentials: true
     path: /graphql
-
+#
 
 
