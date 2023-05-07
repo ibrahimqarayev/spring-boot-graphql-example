@@ -4,16 +4,13 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.experimental.SuperBuilder;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 @MappedSuperclass
-@Entity
 @Data
-@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
 public abstract class BaseEntity {
@@ -23,9 +20,9 @@ public abstract class BaseEntity {
     private Long id;
 
     @CreationTimestamp
-    private LocalDateTime created;
+    private OffsetDateTime created;
 
     @UpdateTimestamp
-    private LocalDateTime updated;
+    private OffsetDateTime updated;
 
 }
