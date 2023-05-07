@@ -1,10 +1,13 @@
+scalar DateTime
+
 type Query{
-    gwtAllUsers:[UserDto]
+    getUsers:[UserDto]
+    getUserById(id:ID!):UserDto
 }
 
 type Mutation{
     createUser(userRequest:UserRequest!):UserDto
-    updateUser(userRequest:UserRequest!):UserDto
+    updateUser(id:ID!,userRequest:UserRequest!):UserDto
     deleteUser(id:ID!):Boolean
 }
 
@@ -12,7 +15,11 @@ type UserDto{
     id:ID
     username:String
     email:String
+    password:String
     role:Role
+    created: DateTime
+    updated: DateTime
+
 }
 
 enum Role {
@@ -24,5 +31,6 @@ input UserRequest{
     id:ID
     username:String
     email:String
+    password:String
     role:Role
 }
